@@ -45,7 +45,7 @@ export default function MultiStep(props: MultiStepProps) {
   useEffect(() => {
     setTopNavState(getTopNavStyles(activeChild, children.length))
     setBottomNavState(getBottomNavState(activeChild, children.length, childIsValid))
-  }, [activeChild, childIsValid])
+  }, [activeChild, childIsValid,props.currentStep])
 
   const childStateChanged = (childState: ChildState) => setChildIsValid(() => childState.isValid)  
   children = React.Children.map(children, child => React.cloneElement(child, { signalParent: childStateChanged }))

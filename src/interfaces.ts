@@ -14,6 +14,7 @@ export interface MultiStepStyles {
 export interface MultiStepProps {
   styles: MultiStepStyles
   children: React.ReactElement[]
+  currentStep:number
 }
 
 export interface ChildState {
